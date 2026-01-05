@@ -1,53 +1,45 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace Tetris
 {
     public class Pas : Shape
     {
 
-        public Pas(int bourd_size):base(bourd_size)
-        {
-            this.color = ConsoleColor.Red;
-            this.vertices = new (int x, int y)[4];
-            this.vertices[0] = (0, 0);
-            this.vertices[1] = (0, 1);
-            this.vertices[2] = (0, 2);
-            this.vertices[3] = (0, 3);
-            this.Put_shape(bourd_size);
-        }
+        public Pas() : base()
+        { }
+        protected override ConsoleColor Color { get; set; } = ConsoleColor.Red;
 
-        public override void clear(int interation)
-        {
-            throw new NotImplementedException();
-        }
+        protected override List<List<(int x, int y)>> vertices { get; set; } = new()
+            {
+               new List<(int x, int y)>
+               {
+                (0, 0),
+                (0, 1),
+                (0, 2),
+                (0, 3), },
 
-        public override void play_shape(int interation)
-        {
-            throw new NotImplementedException();
-        }
+               new List<(int x, int y)>
+               {
+                (-3,3 ),
+                (-2,2),
+                (-1,1 ),
+                (0,0), },
+                new List<(int x, int y)>
+               {
+                (0,0 ),
+                (-1,1),
+                (-2,2 ),
+                (-3,3), }
+            };
 
-        public override void print(int interation)
-        {
-            Console.Write(" ");
-            Console.Write("_");
-            Console.Write("_");
-            Console.Write("_");
-            Console.WriteLine("_");
 
-            Console.Write("|");
-            Console.Write("_");
-            Console.Write("_");
-            Console.Write("_");
-            Console.Write("_");
-            Console.Write("|");
-           
-
-          
-        }
     }
 }
+
+
 

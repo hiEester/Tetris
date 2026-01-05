@@ -13,10 +13,10 @@
 // מהירות ירידת הצורה   
 // מחלקה משחק
 
-using ConsoleApp1;
+using Tetris;
 using System.Security.Cryptography.X509Certificates;
 
-namespace ConsoleApp1
+namespace Tetris
 {
 
 
@@ -24,12 +24,14 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
-            game.start_game();
-            
-            Shape n = new Plus(20 );
-           
-            Shape ns = new Pas(20);
+            while (true)
+            {
+
+                    Game game = new Game();
+                    game.start_game();
+                    
+                
+            }
 
 
 
